@@ -118,7 +118,7 @@ function LoggedInPageContent() {
     setFilterData(() => {
       const searchedUser = userData.current.filter((val) => {
         return (
-          val.first_name.includes(search) || val.last_name.includes(search)
+          val.first_name.toLowerCase().includes(search.toLowerCase()) || val.last_name.toLowerCase().includes(search.toLowerCase())
         );
       });
       return searchedUser;
